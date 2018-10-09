@@ -1,0 +1,149 @@
+:root {
+--hrBlueLt: #8abdfc;
+--hrBlueDk: #739dd2;
+--hrBlueStd: #1c5191;
+--hrBlack: #191919;
+--textLt: #d6ffff;
+--textDk: #00002e;
+}
+
+li, div, p {
+  margin: 10px;
+}
+
+span.strong {
+  font-weight: bold;
+  color: var(--textDk);
+  font-size: 125%;
+  text-decoration: underline double;
+}
+
+span.dash {
+  display: inline-block;
+  width: 15px;
+  height: 3px;
+  background: var(--hrBlack);
+  vertical-align: middle;
+}
+
+[class*="hl-"] {
+  border: 1px solid #191919AA;
+  border-radius: 3px;
+  padding: 2px 5px 2px 5px;
+  font-weight: bold;
+}
+
+span.hl-field {
+  background-color: var(--hrBlack);
+  color: var(--textLt);
+}
+
+span.hl-value {
+  background-color: var(--hrBlueLt);
+  color: var(--textDk);
+}
+
+span.hl-mobileDevice {
+  background-color: #ffc4ff80;
+  color: #910891;
+}
+
+span.hl-staff {
+  background-color: #82875f80;
+  color: #fdffdb;
+}
+
+span.hl-patient {
+  background-color: #f2ce6a80;
+  color: var(--textDk);
+}
+
+span.hl-location {
+  background-color: #2b22ad80;
+  color: var(--textLt);
+}
+
+span.hl-role {
+  background-color: #a3ffee80;
+  color: var(--textDk);
+}
+
+span.hl-A {
+  background-color: #efd8ff80;
+  color: #430b6b;
+}
+
+span.hl-B {
+  background-color: #ededed80;
+  color: #2f2f2f;
+}
+
+span.hl-C {
+  background-color: #2b634e80;
+  color: #e2fff4;
+}
+
+span.hl-D {
+  background-color: #c92e5f80;
+  color: #fff9fb;
+}
+
+span.hl-E {
+  background-color: #2f2f2f80;
+  color: #ededed;
+}
+
+span.hl-F {
+  background-color: #45008480;
+  color: #f4efe1;
+}
+
+span.hl-G {
+  background-color: #bfbbb280;
+  color: #00002e;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip:after {
+  position: absolute;
+  height: 3px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #00000000,
+    #00000000 3px,
+    var(--hrBlueStd) 3px,
+    var(--hrBlueStd) 5px
+  );
+  left: 0;
+  bottom: -5px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--hrBlueDk);
+  color: var(--textLt);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 105%;
+  left: 105%; 
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
