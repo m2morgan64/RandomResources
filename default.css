@@ -7,7 +7,7 @@
 --textDk: #00002e;
 }
 
-li, div, p {
+.std {
   margin: 10px;
 }
 
