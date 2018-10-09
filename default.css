@@ -33,6 +33,28 @@ span.dash {
   font-weight: bold;
 }
 
+span.hl-application {
+  padding: 2px 15px 2px 15px;
+  background-color: var(--hrBlueStd);
+  color: var(--textLt);
+}
+
+span.hl-menuItem {
+  padding: 2px 15px 2px 15px;
+  background-color: #e6e6e6;
+  color: var(--hrBlack);
+}
+
+span.arrow:before {
+  white-space:pre;
+  font-family: Arial;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  content: ' > ';
+  font-size: 200%;
+}
+
 span.hl-field {
   background-color: var(--hrBlack);
   color: var(--textLt);
