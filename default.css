@@ -3,17 +3,23 @@
 --hrBlueDk: #1c5191;
 --hrBlueStd: #739dd2;
 --hrBlueLtSemiTrans: #8abdfc80;
---hrBlueDkSemiTrans: #739dd280;
---hrBlueStdSemiTrans: #1c519180;
+--hrBlueDkSemiTrans: #1c519180;
+--hrBlueStdSemiTrans: #739dd280;
 --hrBlack: #191919;
 --textLt: #d6ffff;
 --textDk: #00002e;
 --borderWidth: 3px;
 --bracketSize: 10px;
+--paddingVertical: 3px;
+--paddingHorizontal: 2px;
 }
 
 .std {
-  margin: 10px;
+  margin:
+    calc(2 * var(--paddingVertical) + 2 * var(--borderWidth))
+    var(--paddingHorizontal)
+    calc(2 * var(--paddingVertical) + 2 * var(--borderWidth))
+    var(--paddingHorizontal);
 }
 
 span.strong {
@@ -32,10 +38,11 @@ span.dash {
 }
 
 .valueSubstitution {
+  height: auto;
   position: relative;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   font-weight: bold;
-  padding: 1px 3px 1px 3px;
+  padding: 1px 1px 1px 1px;
   border: var(--borderWidth) solid var(--hrBlueDk);
   background: repeating-linear-gradient(
     45deg,
@@ -44,9 +51,7 @@ span.dash {
     var(--hrBlueLtSemiTrans) 3px,
     var(--hrBlueLtSemiTrans) 6px
   );
-  /* Text "Fill" in darker color */
   color: var(--textDk);
-  /* Text "Outline" in lighter color */
   text-shadow:
     -2px -2px 0 var(--textLt),
     2px -2px 0 var(--textLt),
@@ -55,17 +60,15 @@ span.dash {
 }
 
 .valueSubstitution:after {
-  display: block;
-  position: absolute;
-  /* add 1x Bracket Size to left */
-  left: var(--bracketSize);
-  /* subtract 2x Bracket Size from width */
-  width: calc(100% - (var(--bracketSize) * 2));
-  /* subtrack 1x Border Width to top */
-  top: calc(-1 * var(--borderWidth));
-  height: 100%;
+  content: "";
   border-top: var(--borderWidth) solid white;
   border-bottom: var(--borderWidth) solid white;
+  display: block;
+  position: absolute;
+  left: var(--bracketSize);
+  width: calc(100% - (var(--bracketSize) * 2));
+  top: calc(-1 * var(--borderWidth));
+  height: 100%;
 }
 
 span.arrow:before {
@@ -81,13 +84,18 @@ span.arrow:before {
 [class*="hl-"] {
   border: 1px solid #191919AA;
   border-radius: 3px;
-  padding: 2px 5px 2px 5px;
+  padding:
+    var(--paddingVertical)
+    var(--paddingHorizontal)
+    var(--paddingVertical)
+    var(--paddingHorizontal);
   font-weight: bold;
+  text-align: middle;
 }
 
 span.hl-application {
   padding: 2px 15px 2px 15px;
-  background-color: var(--hrBlueStd);
+  background-color: var(--hrBlueDk);
   color: var(--textLt);
 }
 
