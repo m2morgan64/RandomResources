@@ -1,10 +1,15 @@
 :root {
 --hrBlueLt: #8abdfc;
---hrBlueDk: #739dd2;
---hrBlueStd: #1c5191;
+--hrBlueDk: #1c5191;
+--hrBlueStd: #739dd2;
+--hrBlueLtSemiTrans: #8abdfc80;
+--hrBlueDkSemiTrans: #739dd280;
+--hrBlueStdSemiTrans: #1c519180;
 --hrBlack: #191919;
 --textLt: #d6ffff;
 --textDk: #00002e;
+--borderWidth: 3px;
+--bracketSize: 10px;
 }
 
 .std {
@@ -24,6 +29,43 @@ span.dash {
   height: 5px;
   background: var(--hrBlack);
   vertical-align: middle;
+}
+
+.valueSubstitution {
+  position: relative;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: bold;
+  padding: 1px 3px 1px 3px;
+  border: var(--borderWidth) solid var(--hrBlueDk);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--hrBlueStdSemiTrans),
+    var(--hrBlueStdSemiTrans) 3px,
+    var(--hrBlueLtSemiTrans) 3px,
+    var(--hrBlueLtSemiTrans) 6px
+  );
+  /* Text "Fill" in darker color */
+  color: var(--textDk);
+  /* Text "Outline" in lighter color */
+  text-shadow:
+    -2px -2px 0 var(--textLt),
+    2px -2px 0 var(--textLt),
+    -2px 2px 0 var(--textLt),
+    2px 2px 0 var(--textLt);
+}
+
+.valueSubstitution:after {
+  display: block;
+  position: absolute;
+  /* add 1x Bracket Size to left */
+  left: var(--bracketSize);
+  /* subtract 2x Bracket Size from width */
+  width: calc(100% - (var(--bracketSize) * 2));
+  /* subtrack 1x Border Width to top */
+  top: calc(-1 * var(--borderWidth));
+  height: 100%;
+  border-top: var(--borderWidth) solid white;
+  border-bottom: var(--borderWidth) solid white;
 }
 
 span.arrow:before {
