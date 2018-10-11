@@ -16,9 +16,9 @@
 
 .std {
   margin:
-    var(--paddingVertical)
+    calc(2 * var(--paddingVertical) + 2 * var(--borderWidth))
     var(--paddingHorizontal)
-    var(--paddingVertical)
+    calc(2 * var(--paddingVertical) + 2 * var(--borderWidth))
     var(--paddingHorizontal);
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
