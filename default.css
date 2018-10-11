@@ -23,6 +23,10 @@
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
+.table-cell-rich-text-view {
+    line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
+}
+
 span.action {
   font-weight: bold;
   font-style: italic;
