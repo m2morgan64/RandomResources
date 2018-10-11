@@ -23,7 +23,7 @@
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
-.table_default_cell {
+.table_cell_border {
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
