@@ -72,7 +72,6 @@ div.headerCell
 
 div.cell
 {
-  min-width: 7em;
   display: table-cell;
 }
 
@@ -105,38 +104,21 @@ span.dash {
   font-weight: bold;
   padding: 1px 1px 1px 1px;
   border: var(--borderWidth) solid var(--hrBlueDk);
-  background: repeating-linear-gradient(
-    45deg,
-    var(--hrBlueStdSemiTrans),
-    var(--hrBlueStdSemiTrans) 3px,
-    var(--hrBlueLtSemiTrans) 3px,
-    var(--hrBlueLtSemiTrans) 6px
-  );
   color: var(--textDk);
 }
 
 .valueSubstitution:after {
   content: "";
-  border-top: var(--borderWidth) solid white;
-  border-bottom: var(--borderWidth) solid white;
+  border-top: var(--borderWidth) solid var(--hrBlueLt);
+  border-bottom: var(--borderWidth) solid var(--hrBlueLt);
   display: block;
   position: absolute;
   left: var(--bracketSize);
   width: calc(100% - (var(--bracketSize) * 2));
   top: calc(-1 * var(--borderWidth));
-  height: 100%;
+  height: 102%;
 }
-/*
-span.arrow:before {
-  white-space:pre;
-  font-family: Arial;
-  display: inline-block;
-  vertical-align: middle;
-  font-weight: bold;
-  content: ' > ';
-  font-size: 200%;
-}
-*/
+
 .arrow:before {
   display: inline-block;
   vertical-align: middle;
