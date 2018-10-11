@@ -33,7 +33,7 @@ div.table
   display: table;
   width: auto;
   border-spacing: 5px 10px;
-  max-width: 90%
+  max-width: 80%;
 }
 
 div.row
