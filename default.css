@@ -18,6 +18,14 @@
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
+p.std, li.std {
+  margin:
+    var(--paddingVertical)
+    var(--paddingHorizontal)
+    var(--paddingVertical)
+    var(--paddingHorizontal);
+}
+
 span.action {
   font-weight: bold;
   font-style: italic;
