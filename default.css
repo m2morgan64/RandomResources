@@ -11,20 +11,69 @@
 --borderWidth: 3px;
 --bracketSize: 10px;
 --paddingVertical: 3px;
---paddingHorizontal: 2px;
+--paddingHorizontal: 8px;
 }
 
 .std {
+    line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
+}
+
+span.li {
   margin:
     calc(2 * var(--paddingVertical) + 2 * var(--borderWidth))
     var(--paddingHorizontal)
     calc(2 * var(--paddingVertical) + 2 * var(--borderWidth))
     var(--paddingHorizontal);
-    line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
-.table_cell_border {
-    line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
+div.table
+{
+  display: inline-block;
+  margin-left: 1em;
+  display: table;
+  width: auto;
+  border-spacing: 5px 10px;
+  max-width: 90%
+}
+
+div.row
+{
+  display: table-row;
+}
+
+div.headerRow
+{
+  line-height: 175%;
+  display: table-header-group;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(var(--hrBlueStd), var(--hrBlueLt));
+  text-align: center;
+  font-size: 125%;
+  color: var(--textDk);
+  text-shadow:
+    -2px -2px 0 var(--textLt),
+    2px -2px 0 var(--textLt),
+    -2px 2px 0 var(--textLt),
+    2px 2px 0 var(--textLt);
+  border: calc(var(--borderWidth) * 2) solid var(--hrBlueDk);
+  border-top-left-radius: 8px ;
+  border-top-right-radius: 8px ;
+}
+
+div.headerCell
+{
+  min-width: 7em;
+  display: table-cell;
+  border-bottom: var(--borderWidth) groove var(--hrBlueDk);
+  border-top-left-radius: 8px ;
+  border-top-right-radius: 8px ;
+}
+
+div.cell
+{
+  min-width: 7em;
+  display: table-cell;
 }
 
 span.action {
@@ -82,7 +131,7 @@ span.dash {
   top: calc(-1 * var(--borderWidth));
   height: 100%;
 }
-
+/*
 span.arrow:before {
   white-space:pre;
   font-family: Arial;
@@ -91,6 +140,14 @@ span.arrow:before {
   font-weight: bold;
   content: ' > ';
   font-size: 200%;
+}
+*/
+.arrow:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  margin: 0 3 0 3;
+  content: url("data:image/svg+xml; utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"10\" height=\"22\"><g><path d=\"M 2,2 8,10 2,20 z\" style=\"fill:#000000\" /></g></svg>");
 }
 
 [class*="hl-"] {
@@ -103,6 +160,7 @@ span.arrow:before {
     var(--paddingHorizontal);
   font-weight: bold;
   text-align: middle;
+  width: auto;
 }
 
 span.hl-application {
@@ -117,12 +175,14 @@ span.hl-menuItem {
   color: var(--hrBlack);
 }
 
-span.hl-field {
+.hl-field {
+  text-align: center;
   background-color: var(--hrBlack);
   color: var(--textLt);
 }
 
-span.hl-value {
+.hl-value {
+  text-align: center;
   background-color: var(--hrBlueLt);
   color: var(--textDk);
 }
