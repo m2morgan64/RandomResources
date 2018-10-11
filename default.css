@@ -23,7 +23,7 @@
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
-.table-cell-rich-text-view {
+.table_default_cell {
     line-height: calc(100% + 2 * var(--paddingVertical) + 2 * var(--borderWidth));
 }
 
