@@ -189,6 +189,11 @@ span.hl-role {
   color: var(--textDk);
 }
 
+span.hl-call {
+  background-color: #cece35;
+  color: #ffffed;
+}
+
 span.hl-A {
   background-color: #efd8ff80;
   color: #430b6b;
