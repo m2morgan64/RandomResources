@@ -96,7 +96,7 @@ span.dash {
   background: var(--hrBlack);
   vertical-align: middle;
 }
-
+/*
 .valueSubstitution {
   height: auto;
   position: relative;
@@ -106,7 +106,7 @@ span.dash {
   border: var(--borderWidth) solid var(--hrBlueDk);
   color: var(--textDk);
 }
-
+*/
 .valueSubstitution:after {
   content: "";
   border-top: var(--borderWidth) solid var(--hrBlueLt);
