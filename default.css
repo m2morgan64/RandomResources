@@ -106,7 +106,7 @@ span.dash {
   border: var(--borderWidth) solid var(--hrBlueDk);
   color: var(--textDk);
 }
-*/
+
 .valueSubstitution:after {
   content: "";
   border-top: var(--borderWidth) solid var(--hrBlueLt);
@@ -118,7 +118,7 @@ span.dash {
   top: calc(-1 * var(--borderWidth));
   height: 102%;
 }
-
+*/
 .arrow:before {
   display: inline-block;
   vertical-align: middle;
