@@ -26,10 +26,16 @@ span.li {
     var(--paddingHorizontal);
 }
 
+div.tableContainer
+{
+  overflow: scroll;
+}
+
 div.table
 {
   display: inline-block;
-  margin-left: 1em;
+  overflow: scroll;
+  margin-left: 0.25em;
   display: table;
   width: auto;
   border-spacing: 5px 10px;
