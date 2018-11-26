@@ -1,5 +1,5 @@
 :root {
---hrBlueLt: #8abdfc;
+--hrBlueLt: #8abdfca;
 --hrBlueDk: #1c5191;
 --hrBlueStd: #739dd2;
 --hrBlueLtSemiTrans: #8abdfc80;
@@ -8,10 +8,10 @@
 --hrBlack: #191919;
 --textLt: #d6ffff;
 --textDk: #00002e;
---borderWidth: 3px;
+--borderWidth: 0px;
 --bracketSize: 10px;
---paddingVertical: 3px;
---paddingHorizontal: 8px;
+--paddingVertical: 0px;
+--paddingHorizontal: 1px;
 }
 
 .std {
@@ -28,7 +28,7 @@ span.li {
 
 div.tableContainer
 {
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 div.table
@@ -134,8 +134,7 @@ span.dash {
 }
 
 [class*="hl-"] {
-  border: 1px solid #191919AA;
-  border-radius: 3px;
+  border-radius: 0px;
   padding:
     var(--paddingVertical)
     var(--paddingHorizontal)
