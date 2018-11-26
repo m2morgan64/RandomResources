@@ -91,7 +91,7 @@ span.action {
 span.strong {
   font-weight: bold;
   color: var(--textDk);
-  font-size: 125%;
+  font-size: 112%;
   text-decoration: underline double;
 }
 
